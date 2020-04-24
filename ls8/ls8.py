@@ -5,7 +5,10 @@
 import sys
 from cpu import *
 
-cpu = CPU()
+program_filename = "./examples/" + sys.argv[1]
 
-cpu.load()
+cpu = CPU()
+# print("before loading")
+cpu.load(program_filename)
+# print(cpu.ram)
 cpu.run()
